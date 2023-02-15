@@ -15,7 +15,7 @@ export default function Subscription() {
       <form onSubmit={handleSubmit}>
         <label>Enter email:&nbsp;
           <input type="email" ref={emailRef}></input>
-        </label>
+        </label>&nbsp;
         <button type="submit">Submit</button>
       </form>
     </>

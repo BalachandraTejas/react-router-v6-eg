@@ -4,8 +4,8 @@ import Home from './Components/Home';
 import About from './Components/About';
 import Blog from './Components/Blog';
 import BlogContent from './Components/BlogContent';
-// import Subscription from './Components/Subscription';
-// import Confirmation from './Components/Confirmation';
+import Subscription from './Components/Subscription';
+import Confirmation from './Components/Confirmation';
 
 import "./App.css";
 
@@ -17,7 +17,7 @@ function App() {
         <NavLink className={getActiveClass} to="/">Home</NavLink>
         <NavLink className={getActiveClass} to="about">About</NavLink>
         <NavLink className={getActiveClass} to="blog">Blog</NavLink>
-        {/* <Link to="subscribe">Subscription</Link> */}
+        <NavLink className={getActiveClass} to="subscribe">Subscription</NavLink>
       </nav>
       <Routes>
         <Route path="/" element={<Home />} />
@@ -26,8 +26,8 @@ function App() {
           <Route path=":blogId" element={<BlogContent />} />
           <Route index element={<h2>Select a topic</h2>} />
         </Route>
-        {/* <Route path="/subscribe" element={<Subscription />} />
-        <Route path="/confirmed" element={<Confirmation />} /> */}
+        <Route path="/subscribe" element={<Subscription />} />
+        <Route path="/confirmed" element={<Confirmation />} />
         <Route path="*" element={<h1>Page Not Found</h1>} />
       </Routes>
     </div>
